@@ -135,5 +135,21 @@ nav {
   }
 }
 
+/* orders */
 
+#orders header {
+  display: flex;
+}
 
+#orders div {
+  border: 2px solid orange;
+}
+
+#ordersContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.orderCard {
+  display: flex;
+}

@@ -24,25 +24,26 @@ server.get('/pizzas', (req, res) => {
     res.json(pizzas)
 })
 
-server.get('orders', (req, res) => {
-    const orderFiles = fs.readdirSync(`${__dirname}/../frontend/public/orders`, (err, files) => {
-        if (err) {
-          console.log(err);
-        } else {
-          console.log("itt vagyok a files-oknál",files);
-        }  // I think this is unnecessary...
-      });
-    
-    console.log("orderFiles",orderFiles);
-    
-    let allOrders = []
-    for (const filename of orderFiles) {
-      allOrders.push(JSON.parse(fs.readFileSync(__dirname+"/pizza_data/orders/"+filename)))
-    }
-    
-    console.log(allOrders);
+// a leendő ordersData 0. indexű eleme a filenevek tömbje 
+// a többi elem egy-egy totalOrder_N json file tartalma
+server.get('/orders', (req, res) => {
 
-    res.json(allOrders)
+  const ordersPath = path.join(`${__dirname}/../frontend/public/orders`); 
+  const orderFiles = fs.readdirSync(ordersPath, (err, files) => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log("itt vagyok a files-oknál",files);
+      }  // I think this is unnecessary...
+    });
+  console.log("orderFiles",orderFiles);
+  
+  let allOrders = []
+  allOrders.push(orderFiles)
+  for (const filename of orderFiles) {
+    allOrders.push(JSON.parse(fs.readFileSync(__dirname+"/../frontend/public/orders/"+filename)))
+  }
+  res.json(allOrders)
 })
 
 server.post("/modify", (req, res) => {
@@ -56,5 +57,24 @@ server.post("/modify", (req, res) => {
 	});
 	return res.send(newPizzasDataString);
 })
+
+
+server.post("/status", (req, res) => {
+  const pack = JSON.parse(JSON.stringify(req.body))
+  console.log(pack)
+
+  const filename = pack.filename
+  const filecontent = pack.filecontent
+
+  const filecontentString = JSON.stringify(filecontent, null, 2)
+  fs.writeFileSync(path.join(__dirname + "/../frontend/public/orders/"+filename), filecontentString, (err) => {
+		if (err) {
+			console.log(err);
+			return res.status(500).send(err);
+		}
+	});
+	return res.send(filecontentString);
+})
+
 
 server.listen(port, () => {console.log(`Server running on localhost:${port}`)})
