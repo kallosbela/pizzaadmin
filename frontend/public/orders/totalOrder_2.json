@@ -1,0 +1,14 @@
+{
+  "pizzaProduct": "Kosár\n• 3 db California pizza      7 470 Ft\n• 1 db Celentano pizza      2 390 Ft\n• 1 db Hawaii pizza      2 390 Ft\nÖsszesen: 12 250 Ft",
+  "customerData": {
+    "name": "Gimli",
+    "zipcode": "5555",
+    "city": "Khazaddum",
+    "street": "Törp utca",
+    "houseNum": "9",
+    "phoneNum": "432423",
+    "email": "gimli@gmail.com"
+  },
+  "timeOfOrder": "2022-11-06T15:05:07.125Z",
+  "status": "active"
+}

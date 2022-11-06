@@ -1,0 +1,14 @@
+{
+  "pizzaProduct": "Kosár\n• 2 db Bolognai pizza      4 980 Ft\n• 1 db California pizza      2 490 Ft\n• 2 db Celentano pizza      4 780 Ft\nÖsszesen: 12 250 Ft",
+  "customerData": {
+    "name": "Csaba",
+    "zipcode": "3333",
+    "city": "Makó",
+    "street": "Békés utca",
+    "houseNum": "54",
+    "phoneNum": "4123423",
+    "email": "csaba@gmail.com"
+  },
+  "timeOfOrder": "2022-11-06T14:57:30.022Z",
+  "status": "active"
+}

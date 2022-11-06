@@ -1,0 +1,14 @@
+{
+  "pizzaProduct": "Kosár\n• 1 db Celentano pizza      2 390 Ft\n• 1 db Hawaii pizza      2 390 Ft\n• 3 db Nápoly pizza      6 870 Ft\nÖsszesen: 11 650 Ft",
+  "customerData": {
+    "name": "Elrond",
+    "zipcode": "4444",
+    "city": "Völgyzugoly",
+    "street": "Tünde utca",
+    "houseNum": "8",
+    "phoneNum": "54235423",
+    "email": "elrond@gmail.com"
+  },
+  "timeOfOrder": "2022-11-06T15:03:17.659Z",
+  "status": "active"
+}

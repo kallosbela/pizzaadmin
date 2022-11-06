@@ -1,0 +1,14 @@
+{
+  "pizzaProduct": "Kosár\n• 5 db Verona pizza      10 950 Ft\nÖsszesen: 10 950 Ft",
+  "customerData": {
+    "name": "Rómeó és Júlia",
+    "zipcode": "1234",
+    "city": "Verona",
+    "street": "Szerelmesek útja",
+    "houseNum": "14",
+    "phoneNum": "432423",
+    "email": "romeoandjuliet@gmail.com"
+  },
+  "timeOfOrder": "2022-11-06T15:06:00.158Z",
+  "status": "active"
+}
